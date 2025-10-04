@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 93 10% 90%; /* Light Sage #E9EAE4 */
+    --foreground: 24 5% 20%; /* Darker color for text on light sage */
+
+    --card: 93 10% 90%; /* Light Sage for cards, same as background */
+    --card-foreground: 24 5% 20%;
+
+    --popover: 93 10% 90%; /* Light Sage for popovers */
+    --popover-foreground: 24 5% 20%;
+
+    --primary: 140 28% 34%; /* Forest Green #3F704F */
+    --primary-foreground: 93 10% 95%; /* Very light sage/off-white for text on primary */
+
+    --secondary: 140 20% 50%; /* A slightly lighter/muted Forest Green */
+    --secondary-foreground: 93 10% 95%;
+
+    --muted: 93 8% 85%; /* Muted Sage */
+    --muted-foreground: 24 5% 35%;
+
+    --accent: 25 58% 40%; /* Earthy Brown #A0522D */
+    --accent-foreground: 93 10% 95%; /* Light text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 10% 65%; /* Border color based on primary */
+    --input: 140 10% 75%; /* Input background based on primary */
+    --ring: 140 28% 34%; /* Forest Green for focus rings */
+
+    --chart-1: 140 28% 34%; /* Forest Green */
+    --chart-2: 25 58% 40%;  /* Earthy Brown */
+    --chart-3: 140 20% 50%; /* Secondary Green */
+    --chart-4: 25 40% 55%;  /* Lighter Brown */
+    --chart-5: 120 30% 60%; /* Another Green tone */
+    
+    --radius: 0.5rem;
+
+    /* Sidebar specific theme adjustments */
+    --sidebar-background: 140 28% 28%; /* Darker Forest Green for sidebar background */
+    --sidebar-foreground: 93 10% 85%; /* Light Sage/Off-white for sidebar text */
+    --sidebar-primary: 93 10% 95%; /* Very light sage/off-white for primary elements in sidebar (e.g., active icon color) */
+    --sidebar-primary-foreground: 140 28% 28%; /* Darker Forest Green for text on sidebar primary elements */
+    --sidebar-accent: 140 28% 38%; /* Slightly lighter Forest Green for hover/accent on sidebar */
+    --sidebar-accent-foreground: 93 10% 95%; /* Very light sage/off-white for text on sidebar accent */
+    --sidebar-border: 140 28% 20%; /* Darker border for sidebar elements */
+    --sidebar-ring: 25 58% 40%; /* Earthy Brown for focus ring in sidebar */
+  }
+
+  .dark {
+    /* Define dark theme variables if needed, for now, focusing on light theme */
+    --background: 24 5% 10%;
+    --foreground: 93 10% 90%;
+
+    --card: 24 5% 10%;
+    --card-foreground: 93 10% 90%;
+
+    --popover: 24 5% 10%;
+    --popover-foreground: 93 10% 90%;
+
+    --primary: 140 28% 40%; 
+    --primary-foreground: 24 5% 5%;
+
+    --secondary: 140 20% 30%;
+    --secondary-foreground: 93 10% 90%;
+
+    --muted: 24 5% 15%;
+    --muted-foreground: 93 10% 60%;
+
+    --accent: 25 58% 50%;
+    --accent-foreground: 24 5% 5%;
+
+    --border: 140 10% 25%;
+    --input: 140 10% 20%;
+    --ring: 140 28% 40%;
+
+    --sidebar-background: 24 5% 8%; 
+    --sidebar-foreground: 93 10% 80%; 
+    --sidebar-primary: 140 28% 50%; 
+    --sidebar-primary-foreground: 24 5% 5%;
+    --sidebar-accent: 24 5% 12%; 
+    --sidebar-accent-foreground: 140 28% 60%;
+    --sidebar-border: 24 5% 15%;
+    --sidebar-ring: 25 58% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
